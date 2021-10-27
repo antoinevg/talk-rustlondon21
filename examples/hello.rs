@@ -34,6 +34,12 @@ fn entry() -> ! {
 
     main().unwrap();
 
+    // exit qemu
+    #[cfg(feature = "cortexm")]
+    {
+        debug::exit(debug::EXIT_SUCCESS);
+    }
+
     loop { }
 }
 
@@ -73,13 +79,5 @@ async fn main(mut ctx: Context) -> Result<()> {
     println!("App Received: {}", message); // should print "Hello Ockam!"
 
     // Stop all workers, stop the node, cleanup and return.
-    let result = ctx.stop().await;
-
-    // exit qemu
-    #[cfg(feature = "cortexm")]
-    {
-        debug::exit(debug::EXIT_SUCCESS);
-    }
-
-    result
+    ctx.stop().await
 }

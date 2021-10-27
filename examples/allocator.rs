@@ -4,7 +4,7 @@ use alloc_cortex_m::CortexMHeap;
 
 // - heap ---------------------------------------------------------------------
 
-const HEAP_SIZE: usize = 1024 * 1536; // in bytes
+const HEAP_SIZE: usize = 1024 * 64; // in bytes
 
 #[global_allocator]
 static ALLOCATOR: CortexMHeap = CortexMHeap::empty();

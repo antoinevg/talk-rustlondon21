@@ -1,7 +1,14 @@
 [build]
 
 [target.'cfg(all(target_arch = "arm", target_os = "none"))']
+
+# qemu
 runner = "qemu-system-arm -cpu cortex-m7 -machine mps2-an500 -nographic -semihosting-config enable=on,target=native -kernel"
+
+# atsame54 && stm32f4
+# openocd -f openocd-atsame54.cfg
+# openocd -f openocd-stm32f4.cfg
+#runner = "arm-none-eabi-gdb -q -x openocd.gdb"
 
 rustflags = [
   "-C", "link-arg=-Tlink.x",

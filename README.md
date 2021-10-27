@@ -3,6 +3,7 @@
 ## Install dependencies
 
     rustup target add thumbv7em-none-eabihf --toolchain nightly
+    rustup target add wasm32-unknown-unknown
     brew install qemu
 
 ## 01-node
