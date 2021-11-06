@@ -4,6 +4,11 @@
 Cargo.lock
 target/
 
+slides/node_modules/
+slides/package-lock.json
+slides/notes.md
+
+
 # editor files
 .vscode/*
 !.vscode/*.md

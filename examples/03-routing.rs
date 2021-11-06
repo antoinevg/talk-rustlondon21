@@ -47,7 +47,7 @@ fn entry() -> ! {
 
 // - ockam::node entrypoint ---------------------------------------------------
 
-use talk_rustlondon22::{Echoer, Hop};
+use talk_rustlondon21::{Echoer, Hop};
 use ockam::{route, Context, Result};
 
 #[ockam::node]

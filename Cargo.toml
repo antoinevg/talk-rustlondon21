@@ -3,7 +3,7 @@ authors = ["Ockam <pi@ockam.io>"]
 edition = "2018"
 resolver = "2"
 readme = "README.md"
-name = "talk-rustlondon22"
+name = "talk-rustlondon21"
 version = "0.1.0"
 
 [features]
